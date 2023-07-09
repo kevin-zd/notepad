@@ -112,7 +112,12 @@ SELECT *
 FROM tbl_emp a
 RIGHT JOIN tbl_dept b ON a.deptId = b.id;
 
-
+-- 全外连接
+select * from tbl_emp a left join tbl_dept b on a.deptId = b.id
+where b.id is null
+union
+select * from tbl_emp a right join tbl_dept b on a.deptId = b.id
+where a.deptId is null
 
 
 
