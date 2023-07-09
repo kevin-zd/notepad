@@ -220,7 +220,14 @@ if(expr,v1,v2)   如果expr表达式为true返回v1，否则返回v2
 ifnull(v1,v2)    如果v1不为null返回v1，否则返回v2
 case expr when v1 then r1[when v2 then r1 ...][else m] end    如果expr的值等于v1,v2等，则返回对应位置then后面的结果，否则返回else后面的结果m
 
-
+执行顺序：
+select xxx
+from xxx
+where xxx
+group by xxx
+having xxx
+order by xxx
+limit xxx
 
 
 
