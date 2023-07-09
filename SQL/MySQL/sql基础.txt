@@ -186,6 +186,47 @@ select SUM(grade),gender from student2 GROUP BY gender HAVING sum(grade) < 300;
 select * from student2 LIMIT 4;
 select * from student2 ORDER BY grade desc LIMIT 4,4;
 
+------- 6、函数 -------
+1、数学类函数
+abs(x)     返回x的绝对值
+sqrt(x)    返回x的非负二次方根
+mod(x,y)   返回x被y除后的余数
+ceiling(x) 返回不小于x的最小整数
+floor(x)   返回不大于x的最大整数
+round(x,y) 将x进行四舍五入操作，小数点后保留y位
+truncate(x,y) 舍去x中小数点后y位的数
+sign(x)    返回x的符号，-1,0或1
+
+2.字符串类函数
+length(x)  返回字符串str的长度
+concat(s1,s2,...)  返回一个或多个字符串连接产生的新的字符串
+trim(str)  删除字符串两侧的空格
+replace(str,s1,s2)  使用字符串s2代替字符串str中所有的字符串s1
+substring(str,n,len) 返回字符串str的子串，起始位置为n，长度为len
+reverse(str)  返回字符串str反转后的结果
+locate(s1,str)  返回子串s1在字符串str中的位置
+
+3.日起和时间函数
+curdate()   获取系统当前时间
+curtime()   获取系统当前时间
+sysdate()   获取当前系统的日期和时间
+time_to_sec()  返回将日期转换成秒的结果
+adddate()   执行日期的加运算
+sbudate()   执行日期的减运算
+date_format()  格式化输出日期和时间值
+
+4.条件判断函数
+if(expr,v1,v2)   如果expr表达式为true返回v1，否则返回v2
+ifnull(v1,v2)    如果v1不为null返回v1，否则返回v2
+case expr when v1 then r1[when v2 then r1 ...][else m] end    如果expr的值等于v1,v2等，则返回对应位置then后面的结果，否则返回else后面的结果m
+
+
+
+
+
+
+
+
 
 
 
